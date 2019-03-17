@@ -280,7 +280,7 @@ class SocketRpcChannel(RpcChannel):
         rpcheader.rpcOp = 0  # rpcheaderproto.RpcPayloadOperationProto.Value('RPC_FINAL_PACKET')
         rpcheader.callId = self.call_id
         rpcheader.retryCount = -1
-        rpcheader.clientId = self.client_id[0:16]
+        rpcheader.clientId = bytes(self.client_id[0:16])
 
         if self.call_id == -3:
             self.call_id = 0
