@@ -165,7 +165,7 @@ class RpcBufferedReader(object):
 
 class SocketRpcChannel(RpcChannel):
     ERROR_BYTES = 18446744073709551615
-    RPC_HEADER = "hrpc"
+    RPC_HEADER = b"hrpc"
     RPC_SERVICE_CLASS = 0x00
     AUTH_PROTOCOL_NONE = 0x00
     AUTH_PROTOCOL_SASL = 0xDF
