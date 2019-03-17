@@ -11,7 +11,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='ProtobufRpcEngine.proto',
   package='hadoop.common',
-  serialized_pb='\n\x17ProtobufRpcEngine.proto\x12\rhadoop.common\"k\n\x12RequestHeaderProto\x12\x12\n\nmethodName\x18\x01 \x02(\t\x12\"\n\x1a\x64\x65\x63laringClassProtocolName\x18\x02 \x02(\t\x12\x1d\n\x15\x63lientProtocolVersion\x18\x03 \x02(\x04\x42<\n\x1eorg.apache.hadoop.ipc.protobufB\x17ProtobufRpcEngineProtos\xa0\x01\x01')
+  serialized_pb=b'\n\x17ProtobufRpcEngine.proto\x12\rhadoop.common\"k\n\x12RequestHeaderProto\x12\x12\n\nmethodName\x18\x01 \x02(\t\x12\"\n\x1a\x64\x65\x63laringClassProtocolName\x18\x02 \x02(\t\x12\x1d\n\x15\x63lientProtocolVersion\x18\x03 \x02(\x04\x42<\n\x1eorg.apache.hadoop.ipc.protobufB\x17ProtobufRpcEngineProtos\xa0\x01\x01')
 
 
 
