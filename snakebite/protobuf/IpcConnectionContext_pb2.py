@@ -26,14 +26,14 @@ _USERINFORMATIONPROTO = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='effectiveUser', full_name='hadoop.common.UserInformationProto.effectiveUser', index=0,
       number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=u"",
+      has_default_value=False, default_value="",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='realUser', full_name='hadoop.common.UserInformationProto.realUser', index=1,
       number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=u"",
+      has_default_value=False, default_value="",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -68,7 +68,7 @@ _IPCCONNECTIONCONTEXTPROTO = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='protocol', full_name='hadoop.common.IpcConnectionContextProto.protocol', index=1,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=u"",
+      has_default_value=False, default_value="",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -89,14 +89,12 @@ _IPCCONNECTIONCONTEXTPROTO.fields_by_name['userInfo'].message_type = _USERINFORM
 DESCRIPTOR.message_types_by_name['UserInformationProto'] = _USERINFORMATIONPROTO
 DESCRIPTOR.message_types_by_name['IpcConnectionContextProto'] = _IPCCONNECTIONCONTEXTPROTO
 
-class UserInformationProto(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class UserInformationProto(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _USERINFORMATIONPROTO
 
   # @@protoc_insertion_point(class_scope:hadoop.common.UserInformationProto)
 
-class IpcConnectionContextProto(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class IpcConnectionContextProto(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _IPCCONNECTIONCONTEXTPROTO
 
   # @@protoc_insertion_point(class_scope:hadoop.common.IpcConnectionContextProto)

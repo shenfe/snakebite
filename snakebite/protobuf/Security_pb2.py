@@ -40,14 +40,14 @@ _TOKENPROTO = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='kind', full_name='hadoop.common.TokenProto.kind', index=2,
       number=3, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=u"",
+      has_default_value=False, default_value="",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='service', full_name='hadoop.common.TokenProto.service', index=3,
       number=4, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=u"",
+      has_default_value=False, default_value="",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -75,7 +75,7 @@ _GETDELEGATIONTOKENREQUESTPROTO = descriptor.Descriptor(
     descriptor.FieldDescriptor(
       name='renewer', full_name='hadoop.common.GetDelegationTokenRequestProto.renewer', index=0,
       number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=u"",
+      has_default_value=False, default_value="",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -236,44 +236,37 @@ DESCRIPTOR.message_types_by_name['RenewDelegationTokenResponseProto'] = _RENEWDE
 DESCRIPTOR.message_types_by_name['CancelDelegationTokenRequestProto'] = _CANCELDELEGATIONTOKENREQUESTPROTO
 DESCRIPTOR.message_types_by_name['CancelDelegationTokenResponseProto'] = _CANCELDELEGATIONTOKENRESPONSEPROTO
 
-class TokenProto(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class TokenProto(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _TOKENPROTO
 
   # @@protoc_insertion_point(class_scope:hadoop.common.TokenProto)
 
-class GetDelegationTokenRequestProto(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetDelegationTokenRequestProto(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETDELEGATIONTOKENREQUESTPROTO
 
   # @@protoc_insertion_point(class_scope:hadoop.common.GetDelegationTokenRequestProto)
 
-class GetDelegationTokenResponseProto(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class GetDelegationTokenResponseProto(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _GETDELEGATIONTOKENRESPONSEPROTO
 
   # @@protoc_insertion_point(class_scope:hadoop.common.GetDelegationTokenResponseProto)
 
-class RenewDelegationTokenRequestProto(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class RenewDelegationTokenRequestProto(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _RENEWDELEGATIONTOKENREQUESTPROTO
 
   # @@protoc_insertion_point(class_scope:hadoop.common.RenewDelegationTokenRequestProto)
 
-class RenewDelegationTokenResponseProto(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class RenewDelegationTokenResponseProto(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _RENEWDELEGATIONTOKENRESPONSEPROTO
 
   # @@protoc_insertion_point(class_scope:hadoop.common.RenewDelegationTokenResponseProto)
 
-class CancelDelegationTokenRequestProto(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class CancelDelegationTokenRequestProto(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _CANCELDELEGATIONTOKENREQUESTPROTO
 
   # @@protoc_insertion_point(class_scope:hadoop.common.CancelDelegationTokenRequestProto)
 
-class CancelDelegationTokenResponseProto(message.Message):
-  __metaclass__ = reflection.GeneratedProtocolMessageType
+class CancelDelegationTokenResponseProto(message.Message, metaclass=reflection.GeneratedProtocolMessageType):
   DESCRIPTOR = _CANCELDELEGATIONTOKENRESPONSEPROTO
 
   # @@protoc_insertion_point(class_scope:hadoop.common.CancelDelegationTokenResponseProto)
