@@ -11,7 +11,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='IpcConnectionContext.proto',
   package='hadoop.common',
-  serialized_pb='\n\x1aIpcConnectionContext.proto\x12\rhadoop.common\"?\n\x14UserInformationProto\x12\x15\n\reffectiveUser\x18\x01 \x01(\t\x12\x10\n\x08realUser\x18\x02 \x01(\t\"d\n\x19IpcConnectionContextProto\x12\x35\n\x08userInfo\x18\x02 \x01(\x0b\x32#.hadoop.common.UserInformationProto\x12\x10\n\x08protocol\x18\x03 \x01(\tB?\n\x1eorg.apache.hadoop.ipc.protobufB\x1aIpcConnectionContextProtos\xa0\x01\x01')
+  serialized_pb=b'\n\x1aIpcConnectionContext.proto\x12\rhadoop.common\"?\n\x14UserInformationProto\x12\x15\n\reffectiveUser\x18\x01 \x01(\t\x12\x10\n\x08realUser\x18\x02 \x01(\t\"d\n\x19IpcConnectionContextProto\x12\x35\n\x08userInfo\x18\x02 \x01(\x0b\x32#.hadoop.common.UserInformationProto\x12\x10\n\x08protocol\x18\x03 \x01(\tB?\n\x1eorg.apache.hadoop.ipc.protobufB\x1aIpcConnectionContextProtos\xa0\x01\x01')
 
 
 
