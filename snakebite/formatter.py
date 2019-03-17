@@ -12,7 +12,7 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 # License for the specific language governing permissions and limitations under
 # the License.
-from __future__ import division
+
 
 import datetime
 import stat
@@ -240,7 +240,7 @@ def format_stat(results, json_output=False):
         ret['permission'] = _format_permission(ret['permission'])
     if json_output:
         return json.dumps(ret)
-    return "\n".join(["%-20s\t%s" % (k, v) for k, v in sorted(ret.iteritems())])
+    return "\n".join(["%-20s\t%s" % (k, v) for k, v in sorted(ret.items())])
 
 
 def format_bytes(bytes):

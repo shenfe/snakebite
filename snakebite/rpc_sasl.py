@@ -29,7 +29,7 @@ May 2015
 Bolke de Bruin (bolke@xs4all.nl)
 
 '''
-from __future__ import absolute_import
+
 
 import struct
 import sasl

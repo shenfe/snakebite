@@ -13,7 +13,7 @@
 # License for the specific language governing permissions and limitations under
 # the License.
 
-from __future__ import print_function
+
 
 import bz2
 import errno
@@ -1162,7 +1162,7 @@ class Client(object):
                         successful_read = False
                 else:
                     raise ConnectionFailureException(
-                        u"Failure to connect to data node at ({}:{})".format(
+                        "Failure to connect to data node at ({}:{})".format(
                             host, port
                             ))
                 if successful_read:
