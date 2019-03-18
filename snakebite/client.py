@@ -1097,6 +1097,17 @@ class Client(object):
 
         return self.service.complete(request)
 
+    @staticmethod
+    def sortable_thing(t):
+
+        class S(object):
+            def __init__(self, v):
+                self.value = v
+            def __lt__(self, other):
+                return False
+
+        return S(t)
+
     def _read_file(self, path, node, tail_only, check_crc, tail_length=1024):
         length = node.length
 
@@ -1139,15 +1150,16 @@ class Client(object):
             # Prioritize locations to read from
             locations_queue = Queue.PriorityQueue()  # Primitive queuing based on a node's past failure
             for location in block.locs:
+                wrapped_loc = self.sortable_thing(location)
                 if location.id.storageID in failed_nodes:
-                    locations_queue.put((1, location))  # Priority num, data
+                    locations_queue.put((1, wrapped_loc))  # Priority num, data
                 else:
-                    locations_queue.put((0, location))
+                    locations_queue.put((0, wrapped_loc))
 
             # Read data
             successful_read = False
             while not locations_queue.empty():
-                location = locations_queue.get()[1]
+                location = locations_queue.get().value[1]
                 host = location.id.hostName if self.use_datanode_hostname else location.id.ipAddr
                 port = int(location.id.xferPort)
                 data_xciever = DataXceiverChannel(host, port)
