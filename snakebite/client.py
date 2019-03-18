@@ -772,6 +772,9 @@ class Client(object):
                 os.rename(temporary_target, target)
                 result = True
             except Exception as e:
+                import traceback
+                traceback.print_exc()
+
                 result = False
                 error = e
                 if os.path.isfile(temporary_target):

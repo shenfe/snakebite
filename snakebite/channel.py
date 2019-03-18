@@ -154,7 +154,7 @@ class RpcBufferedReader(object):
         log.debug("Reset buffer to pos %d" % self.pos)
 
     def reset(self):
-        self.buffer = ""
+        self.buffer = b""
         self.pos = -1  # position of last byte read
 
     @property
