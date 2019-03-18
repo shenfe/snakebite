@@ -1159,7 +1159,7 @@ class Client(object):
             # Read data
             successful_read = False
             while not locations_queue.empty():
-                location = locations_queue.get().value[1]
+                location = locations_queue.get()[1].value
                 host = location.id.hostName if self.use_datanode_hostname else location.id.ipAddr
                 port = int(location.id.xferPort)
                 data_xciever = DataXceiverChannel(host, port)
