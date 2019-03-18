@@ -633,7 +633,7 @@ class DataXceiverChannel(object):
 
                 read_on_packet = 0
                 for i in range(loads_per_packet):
-                    load = ''
+                    load = b''
                     for j in range(chunks_per_load):
                         log.debug("Reading chunk %s in load %s:", j, i)
                         bytes_to_read = min(bytes_per_chunk, data_len - read_on_packet)
