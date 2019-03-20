@@ -42,6 +42,7 @@ class Tox(TestCommand):
 
 install_requires = [
     'protobuf==3.7.0',
+    'sasl==0.2.1',
     'argparse']
 
 extras_require = {
