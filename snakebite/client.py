@@ -767,8 +767,8 @@ class Client(object):
             f = open(temporary_target, 'wb')
             try:
                 for load in self._read_file(path, node, tail_only=False, check_crc=check_crc):
-                    # f.write(load)
-                    f.write(load.decode('utf8'))
+                    f.write(load)
+                    # f.write(load.decode('utf8'))
                 f.close()
                 os.rename(temporary_target, target)
                 result = True
