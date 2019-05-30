@@ -14,7 +14,7 @@
 # the License.
 
 
-
+import sys
 import bz2
 import errno
 import fnmatch
@@ -50,6 +50,25 @@ except NameError:
     long = int  # Python 3
 
 log = logging.getLogger(__name__)
+
+
+is_py3 = sys.version_info[0] == 3
+if is_py3:
+    string_types = str
+else:
+    string_types = basestring  # pylint: disable=undefined-variable
+
+
+def to_unicode(s):
+    if is_py3:
+        return s.decode('utf8') if isinstance(s, bytes) else s
+    return s.decode('utf8') if isinstance(s, str) else s
+
+
+def to_utf8str(s):
+    if is_py3:
+        return s.encode('utf8') if isinstance(s, str) else s
+    return s.encode('utf8') if isinstance(s, unicode) else s  # pylint: disable=undefined-variable
 
 
 class Client(object):
@@ -1068,7 +1087,7 @@ class Client(object):
 
     def _get_full_path(self, path, node):
         if node.path:
-            return posixpath.join(path, node.path)
+            return posixpath.join(to_unicode(path), to_unicode(node.path))
         else:
             return path
 
